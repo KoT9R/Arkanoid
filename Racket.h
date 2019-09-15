@@ -8,14 +8,15 @@
 class Racket: public Rectangle {
 public:
     explicit Racket(sf::RenderWindow *window);
+    void resize();
     void draw();
     void update(float time);
 
+    float speed;
+    float width_racket_coef;
+    int __score;
 private:
     sf::RenderWindow* __window;
-    int __score;
-
-
 };
 
 
